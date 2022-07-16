@@ -1,0 +1,9 @@
+.default-button {
+  @apply px-4 py-2
+         bg-blue-800
+         border-none rounded-sm
+         text-base leading-none
+         text-white
+         cursor-pointer
+         hover:bg-blue-500;
+}

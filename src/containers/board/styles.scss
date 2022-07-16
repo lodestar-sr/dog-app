@@ -1,0 +1,21 @@
+.board-container {
+  @apply h-screen flex flex-col;
+}
+
+.logo {
+  @apply w-36 my-auto mr-5;
+}
+
+.main-board {
+  @apply w-screen overflow-auto mt-24 p-6 flex flex-col;
+}
+
+.table-section {
+  @apply relative bg-white overflow-auto;
+}
+
+.dog-body {
+  background-image: url("../../assets/images/dog-back.png");
+  background-size: cover;
+  background-position: center center;
+}

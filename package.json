@@ -1,0 +1,102 @@
+{
+  "name": "coding-cases",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "/",
+  "author": "kev",
+  "scripts": {
+    "analyze": "react-scripts analyze",
+    "build": "react-scripts build",
+    "format": "prettier --write src/**/*.{js,ts,tsx,css,md,json}",
+    "lint": "eslint --ext .ts,.tsx src",
+    "lint:css": "stylelint src/**/*.{css,scss}",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-router-dom": "^5.3.0",
+    "axios": "^0.27.2",
+    "clsx": "^1.1.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "node-sass": "^7.0.1",
+    "query-string": "^7.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-loader-spinner": "^5.1.5",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-saga": "^1.1.3",
+    "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.9.6",
+    "@types/styled-components": "^5.1.14",
+    "@types/webpack-env": "^1.16.2",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "autoprefixer": "^10.4.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^6.1.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "postcss": "^8.4.14",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "tailwindcss": "^3.1.5",
+    "typescript": "^4.4.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn type-check"
+    }
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

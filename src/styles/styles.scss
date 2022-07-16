@@ -1,0 +1,20 @@
+.app-container {
+  @apply relative
+         w-screen h-screen
+         overflow-y-auto
+         flex;
+
+  .main-panel {
+    @apply flex flex-auto flex-col
+       bg-gray-100;
+  }
+
+  .page-header {
+    @apply fixed top-0 left-0 z-50
+           w-screen
+           py-6 px-6
+           flex items-center justify-between
+           text-lg
+           bg-blue-500/50;
+  }
+}
